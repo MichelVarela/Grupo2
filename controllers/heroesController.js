@@ -1,7 +1,7 @@
 const fs = require('fs');
 const heroes = JSON.parse(fs.readFileSync('./data/heroes.json','utf-8'));
 
-const heroesController = {
+module.exports = {
     index: (req,res)=>{
         res.send(heroes);
     },
@@ -32,4 +32,3 @@ const heroesController = {
     }
 };
 
-module.exports = heroesController;
